@@ -19,7 +19,7 @@ public class App {
     public static void main(String[] args) {
 //          port(8080);
         try {
-            Connection connection = getDatabaseConnection("postgres://zciqobeldegqhj:4d13c7b3a96005b298ca74370d6af36691cdd1742d63023166a6b5e79fb63bad@ec2-184-72-236-57.compute-1.amazonaws.com:5432/dcql5u59n1c5v5\n");
+            Connection connection = getDatabaseConnection("jdbc:postgres://zciqobeldegqhj:4d13c7b3a96005b298ca74370d6af36691cdd1742d63023166a6b5e79fb63bad@ec2-184-72-236-57.compute-1.amazonaws.com:5432/dcql5u59n1c5v5\n");
             port(getHerokuAssignedPort());
             List<String> allusers = new ArrayList<>();
             staticFiles.location("/public");
