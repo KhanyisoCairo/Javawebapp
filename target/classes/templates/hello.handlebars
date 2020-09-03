@@ -8,25 +8,42 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Greet me</h1>
+<div class="container">
+<div class="col-12">
+    <h1 class="display-3">Greet me</h1>
 
+</div>
+<form class="needs-validation" action="/greet" method="post" novalidate>
+    <div class="form-row">
+        <div class="col-md-6-mb-3">
+<!--            <label for="validationCustom04">LANGUAGES</label>-->
+            <input type="text" name="username">
+            <input type="radio" name="language" value="Isixhosa">Isixhosa
+            <input type="radio" name="language" value="English">English
+
+
+            <button type="submit" class="btn btn-primary my-1">Greet</button>
+            <button type="reset" class="btn btn-primary my-1">Clear</button>
+
+            <br>
+            <span>Names greeted {{counter}}</span>
+        </div>
+    </div>
+<div class="col-sm-4">
     <h2>Counter {{counter}}</h2>
-
-    <form action="/hello" method="post" >
-        <input type="text" name="username">
-        <input type="radio" name="language" value="Isixhosa">Isixhosa
-        <input type="radio" name="language" value="English">English
-        <input type="submit" >
-    </form>
+</div>
+</form>
 
     {{greeting}}
     <div>
         <ul>
             {{#each users}}
-                <li>{{this}}</li>
+                <li>{{this.counter}}</li>
             {{/each}}
         </ul>
     </div>
+
+</div>
 </body>
 
 
